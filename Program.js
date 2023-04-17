@@ -28,11 +28,12 @@ function executeOrder66() {
     document.getElementById("sus").remove();
     var card = document.createElement("div")
     card.id = "sus"
+    card.classList.add("card")
     card.onclick = function() {
         card.childNodes[0].hidden = !card.childNodes[0].hidden
         card.childNodes[1].hidden = !card.childNodes[1].hidden
+        card.classList.toggle("doaflip")
     }
-    card.classList.add("card")
 
     var front = document.createElement("span");
     front.hidden = false;
